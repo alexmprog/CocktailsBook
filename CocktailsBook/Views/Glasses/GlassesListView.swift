@@ -19,7 +19,7 @@ struct GlassesListView: View {
                     NavigationLink {
                         CocktailsListView(cocktailsSource: CocktailsSource.glasses, sourceId: glass.id)
                     } label: {
-                        GlassItem(glass: glass)
+                        TextItemView(name: glass.name)
                     }
                     .padding([.leading, .trailing], 15)
                 }
@@ -37,6 +37,6 @@ struct GlassesListView: View {
     }
 }
 
-//#Preview {
-//    GlassesListView()
-//}
+#Preview {
+    GlassesListView()
+}

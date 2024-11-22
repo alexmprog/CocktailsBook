@@ -19,7 +19,7 @@ struct CategoriesListView: View {
                     NavigationLink {
                         CocktailsListView(cocktailsSource: CocktailsSource.categories, sourceId: category.id)
                     } label: {
-                        CategoryItem(category: category)
+                        TextItemView(name: category.name)
                     }
                     .padding([.leading, .trailing], 15)
                 }

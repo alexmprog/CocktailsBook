@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CocktailItem: View {
+struct CocktailItemView: View {
     
     var cocktail: Cocktail
 

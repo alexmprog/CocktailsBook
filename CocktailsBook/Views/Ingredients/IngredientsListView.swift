@@ -19,7 +19,7 @@ struct IngredientsListView: View {
                     NavigationLink {
                         CocktailsListView(cocktailsSource: CocktailsSource.ingredients, sourceId: ingredient.id)
                     } label: {
-                        IngredientItem(ingredient: ingredient)
+                        TextItemView(name: ingredient.name)
                     }
                     .padding([.leading, .trailing], 15)
                 }
@@ -37,6 +37,6 @@ struct IngredientsListView: View {
     }
 }
 
-//#Preview {
-//    IngredientsListView()
-//}
+#Preview {
+    IngredientsListView()
+}
