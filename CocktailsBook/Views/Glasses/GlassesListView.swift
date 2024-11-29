@@ -9,13 +9,13 @@ import SwiftUI
 
 struct GlassesListView: View {
     
-    @Environment(GlassesState.self) private var glassesState
+    @Environment(AppState.self) private var appState
     
     var body: some View {
         let _ = Self._printChanges()
         NavigationStack {
             List {
-                ForEach(glassesState.glasses) { glass in
+                ForEach(appState.glassesState.glasses) { glass in
                     NavigationLink {
                         CocktailsListView(cocktailsSource: CocktailsSource.glasses, sourceId: glass.id)
                     } label: {
@@ -28,7 +28,7 @@ struct GlassesListView: View {
             .navigationTitle("glasses_title")
             .task {
                 do {
-                     try await glassesState.fetchAllGlasses()
+                    try await appState.glassesState.fetchAllGlasses()
                 } catch {
                     print(error.localizedDescription)
                 }

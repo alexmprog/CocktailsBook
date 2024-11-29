@@ -16,10 +16,6 @@ struct CocktailsBookApp: App {
         WindowGroup {
             ContentView()
                 .environment(appState)
-                .environment(appState.categoriesState)
-                .environment(appState.ingredientsState)
-                .environment(appState.glassesState)
-                .environment(appState.cocktailsState)
         }
     }
 }

@@ -45,8 +45,4 @@ struct ContentView: View {
      let appState = AppState()
      return ContentView()
         .environment(appState)
-        .environment(appState.categoriesState)
-        .environment(appState.ingredientsState)
-        .environment(appState.glassesState)
-        .environment(appState.cocktailsState)
 }
