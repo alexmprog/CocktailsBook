@@ -25,7 +25,7 @@ struct GlassesListView: View {
                 }
                 .listRowInsets(EdgeInsets())
             }
-            .navigationTitle("Glasses")
+            .navigationTitle("glasses_title")
             .task {
                 do {
                      try await viewModel.fetchAllGlasses()
@@ -35,8 +35,4 @@ struct GlassesListView: View {
             }
         }
     }
-}
-
-#Preview {
-    GlassesListView()
 }

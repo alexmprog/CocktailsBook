@@ -25,7 +25,7 @@ struct CategoriesListView: View {
                 }
                 .listRowInsets(EdgeInsets())
             }
-            .navigationTitle("Categories")
+            .navigationTitle("categories_title")
             .task {
                 do {
                      try await viewModel.fetchAllCategories()
@@ -33,6 +33,6 @@ struct CategoriesListView: View {
                     print(error.localizedDescription)
                 }
             }
-        } 
+        }
     }
 }

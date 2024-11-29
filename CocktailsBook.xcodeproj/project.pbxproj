@@ -31,6 +31,7 @@
 		AD58B9E02C7A41090099F70A /* Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58B9DF2C7A41090099F70A /* Cocktail.swift */; };
 		AD58B9E32C7A42A40099F70A /* CocktailsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58B9E22C7A42A40099F70A /* CocktailsListView.swift */; };
 		AD58B9E52C7A43B20099F70A /* CocktailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58B9E42C7A43B20099F70A /* CocktailItem.swift */; };
+		ADBFF3272CF7724500F1DBF2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ADBFF3262CF7724500F1DBF2 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		AD58B9DF2C7A41090099F70A /* Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail.swift; sourceTree = "<group>"; };
 		AD58B9E22C7A42A40099F70A /* CocktailsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsListView.swift; sourceTree = "<group>"; };
 		AD58B9E42C7A43B20099F70A /* CocktailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailItem.swift; sourceTree = "<group>"; };
+		ADBFF3262CF7724500F1DBF2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		AD58B99B2C7A275C0099F70A /* CocktailsBook */ = {
 			isa = PBXGroup;
 			children = (
+				ADBFF3262CF7724500F1DBF2 /* Localizable.xcstrings */,
 				AD388D9F2CF0BDE200D4CB82 /* ViewModels */,
 				AD58B9DC2C7A3C0A0099F70A /* Resources */,
 				AD58B9C92C7A294A0099F70A /* Services */,
@@ -364,6 +367,7 @@
 			files = (
 				AD58B9A42C7A275D0099F70A /* Preview Assets.xcassets in Resources */,
 				AD58B9A12C7A275D0099F70A /* Assets.xcassets in Resources */,
+				ADBFF3272CF7724500F1DBF2 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

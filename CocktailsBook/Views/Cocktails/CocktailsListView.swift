@@ -28,7 +28,7 @@ struct CocktailsListView: View {
             }
             .listRowInsets(EdgeInsets())
         }
-        .navigationTitle("Cocktails")
+        .navigationTitle("cocktails_title")
         .task {
             if sourceId != nil {
                 do {
@@ -39,8 +39,4 @@ struct CocktailsListView: View {
             }
         }
     }
-}
-
-#Preview {
-    CocktailsListView()
 }

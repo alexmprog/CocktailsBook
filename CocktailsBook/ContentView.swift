@@ -19,21 +19,22 @@ struct ContentView: View {
 
     var body: some View {
         TabView(selection: $selection) {
+            
             CategoriesListView()
                 .tabItem {
-                    Label("Categories", systemImage: "list.bullet")
+                    Label("categories_title", systemImage: "list.bullet")
                 }
                 .tag(Tab.categories)
-
+            
             IngredientsListView()
                 .tabItem {
-                    Label("Ingredients", systemImage: "list.bullet")
+                    Label("ingredients_title", systemImage: "list.bullet")
                 }
                 .tag(Tab.ingredients)
             
             GlassesListView()
                 .tabItem {
-                    Label("Glasses", systemImage: "list.bullet")
+                    Label("glasses_title", systemImage: "list.bullet")
                 }
                 .tag(Tab.glasses)
         }
