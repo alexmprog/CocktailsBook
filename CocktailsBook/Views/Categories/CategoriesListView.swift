@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategoriesListView: View {
     
-    @StateObject private var viewModel: CategoriesViewModel = CategoriesViewModel()
+    @State private var viewModel: CategoriesViewModel = CategoriesViewModel()
     
     var body: some View {
         let _ = Self._printChanges()

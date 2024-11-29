@@ -9,7 +9,7 @@ import SwiftUI
 
 struct IngredientsListView: View {
     
-    @StateObject private var viewModel: IngredientsViewModel = IngredientsViewModel()
+    @State private var viewModel: IngredientsViewModel = IngredientsViewModel()
     
     var body: some View {
         let _ = Self._printChanges()

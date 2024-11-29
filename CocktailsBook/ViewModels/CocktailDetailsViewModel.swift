@@ -8,10 +8,9 @@
 import Foundation
 import SwiftUI
 
-@MainActor
-class CocktailDetailsViewModel: ObservableObject {
+@Observable class CocktailDetailsViewModel {
     
-    @Published var cocktailDetails: CocktailDetails? = nil
+    private(set) var cocktailDetails: CocktailDetails? = nil
     
     func fetchCocktailDetails(cocktailId: String) async throws {
         self.cocktailDetails = try await NetworkService.shared.getCocktailDetails(coctailId: cocktailId)

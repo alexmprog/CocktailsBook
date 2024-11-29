@@ -8,10 +8,9 @@
 import Foundation
 import SwiftUI
 
-@MainActor
-class GlassesViewModel: ObservableObject {
+@Observable class GlassesViewModel {
     
-    @Published var glasses: [Glass] = []
+    private(set) var glasses: [Glass] = []
     
     func fetchAllGlasses() async throws {
         self.glasses = try await NetworkService.shared.getAllGlasses()

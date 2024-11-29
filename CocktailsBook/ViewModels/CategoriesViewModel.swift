@@ -8,10 +8,9 @@
 import Foundation
 import SwiftUI
 
-@MainActor
-class CategoriesViewModel: ObservableObject {
+@Observable class CategoriesViewModel {
     
-    @Published var categories: [Category] = []
+    private(set) var categories: [Category] = []
     
     func fetchAllCategories() async throws {
         self.categories = try await NetworkService.shared.getAllCategories()

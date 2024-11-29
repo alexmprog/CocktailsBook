@@ -8,10 +8,9 @@
 import Foundation
 import SwiftUI
 
-@MainActor
-class CocktailsViewModel: ObservableObject {
+@Observable class CocktailsViewModel {
     
-    @Published var cocktails: [Cocktail] = []
+    private(set) var cocktails: [Cocktail] = []
     
     func fetchCocktailsBySource(source: CocktailsSource, sourceId: String) async throws {
         let service = NetworkService.shared

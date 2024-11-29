@@ -8,10 +8,9 @@
 import Foundation
 import SwiftUI
 
-@MainActor
-class IngredientsViewModel: ObservableObject {
+@Observable class IngredientsViewModel {
     
-    @Published var ingredients: [Ingredient] = []
+    private(set) var ingredients: [Ingredient] = []
     
     func fetchAllIngredients() async throws {
         self.ingredients = try await NetworkService.shared.getAllIngredients()

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CocktailsListView: View {
     
-    @StateObject private var viewModel: CocktailsViewModel = CocktailsViewModel()
+    @State private var viewModel: CocktailsViewModel = CocktailsViewModel()
     
     var cocktailsSource: CocktailsSource = CocktailsSource.categories
     var sourceId: String?

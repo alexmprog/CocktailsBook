@@ -12,7 +12,7 @@ struct CocktailDetailsView: View {
     
     var cocktail: Cocktail
     
-    @StateObject private var viewModel: CocktailDetailsViewModel = CocktailDetailsViewModel()
+    @State private var viewModel: CocktailDetailsViewModel = CocktailDetailsViewModel()
 
     var body: some View {
         ScrollView {
