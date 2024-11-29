@@ -1,26 +1,33 @@
 //
-//  CocktailsViewModel.swift
+//  CocktailsState.swift
 //  CocktailsBook
 //
-//  Created by Alexandr Golovach on 22.11.24.
+//  Created by Alexandr Golovach on 29.11.24.
 //
 
 import Foundation
 import SwiftUI
 
-@Observable class CocktailsViewModel {
+@Observable class CocktailsState {
     
     private(set) var cocktails: [Cocktail] = []
+    private(set) var cocktailDetails: CocktailDetails? = nil
     
     func fetchCocktailsBySource(source: CocktailsSource, sourceId: String) async throws {
+        self.cocktails = []
         let service = NetworkService.shared
         self.cocktails = switch(source){
-            case .categories: 
+            case .categories:
                 try await service.getCocktailsByCategory(categoryId: sourceId)
-            case .ingredients: 
+            case .ingredients:
                 try await service.getCocktailsByIngredient(ingredientId: sourceId)
-            case .glasses: 
+            case .glasses:
                 try await service.getCocktailsByGlass(glassId: sourceId)
         }
+    }
+    
+    func fetchCocktailDetails(cocktailId: String) async throws {
+        self.cocktailDetails = nil
+        self.cocktailDetails = try await NetworkService.shared.getCocktailDetails(coctailId: cocktailId)
     }
 }

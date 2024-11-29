@@ -9,13 +9,13 @@ import SwiftUI
 
 struct CategoriesListView: View {
     
-    @State private var viewModel: CategoriesViewModel = CategoriesViewModel()
+    @Environment(CategoriesState.self) private var categoriesState
     
     var body: some View {
         let _ = Self._printChanges()
         NavigationStack {
             List {
-                ForEach(viewModel.categories) { category in
+                ForEach(categoriesState.categories) { category in
                     NavigationLink {
                         CocktailsListView(cocktailsSource: CocktailsSource.categories, sourceId: category.id)
                     } label: {
@@ -28,7 +28,7 @@ struct CategoriesListView: View {
             .navigationTitle("categories_title")
             .task {
                 do {
-                     try await viewModel.fetchAllCategories()
+                     try await categoriesState.fetchAllCategories()
                 } catch {
                     print(error.localizedDescription)
                 }

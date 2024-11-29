@@ -10,11 +10,12 @@ import SwiftUI
 
 struct CocktailDetailsView: View {
     
-    var cocktail: Cocktail
+    let cocktail: Cocktail
     
-    @State private var viewModel: CocktailDetailsViewModel = CocktailDetailsViewModel()
+    @Environment(CocktailsState.self) private var cocktailsState
 
     var body: some View {
+        let _ = Self._printChanges()
         ScrollView {
             VStack (alignment: .leading) {
                 AsyncImage(url: URL(string: cocktail.thumb),
@@ -32,17 +33,17 @@ struct CocktailDetailsView: View {
                 .scaledToFit()
                 Text(cocktail.name)
                     .padding(.all, 8)
-                Text(viewModel.cocktailDetails?.category ?? "" )
+                Text(cocktailsState.cocktailDetails?.category ?? "" )
                     .padding(.all, 8)
-                Text(viewModel.cocktailDetails?.glass ?? "" )
+                Text(cocktailsState.cocktailDetails?.glass ?? "" )
                     .padding(.all, 8)
-                Text(viewModel.cocktailDetails?.description ?? "" )
+                Text(cocktailsState.cocktailDetails?.description ?? "" )
                     .padding(.all, 8)
                 }.frame(maxWidth: .infinity, alignment: .leading)
         }
         .task {
             do {
-                try await viewModel.fetchCocktailDetails(cocktailId: cocktail.id)
+                try await cocktailsState.fetchCocktailDetails(cocktailId: cocktail.id)
             } catch {
                 print(error.localizedDescription)
             }

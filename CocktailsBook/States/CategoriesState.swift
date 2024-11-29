@@ -1,14 +1,14 @@
 //
-//  CategoriesViewModel.swift
+//  CategoriesState.swift
 //  CocktailsBook
 //
-//  Created by Alexandr Golovach on 22.11.24.
+//  Created by Alexandr Golovach on 29.11.24.
 //
 
 import Foundation
 import SwiftUI
 
-@Observable class CategoriesViewModel {
+@Observable class CategoriesState {
     
     private(set) var categories: [Category] = []
     

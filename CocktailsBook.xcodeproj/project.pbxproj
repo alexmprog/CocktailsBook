@@ -10,11 +10,6 @@
 		AD388D942CEF641F00D4CB82 /* Glass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD388D932CEF641F00D4CB82 /* Glass.swift */; };
 		AD388D992CEF66A000D4CB82 /* GlassesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD388D982CEF66A000D4CB82 /* GlassesListView.swift */; };
 		AD388D9B2CEF7E5900D4CB82 /* CocktailDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD388D9A2CEF7E5900D4CB82 /* CocktailDetailsView.swift */; };
-		AD388DA12CF0BE0800D4CB82 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD388DA02CF0BE0800D4CB82 /* CategoriesViewModel.swift */; };
-		AD388DA42CF0BE5900D4CB82 /* IngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD388DA32CF0BE5900D4CB82 /* IngredientsViewModel.swift */; };
-		AD388DA62CF0BF2F00D4CB82 /* GlassesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD388DA52CF0BF2F00D4CB82 /* GlassesViewModel.swift */; };
-		AD388DA82CF0BF6D00D4CB82 /* CocktailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD388DA72CF0BF6D00D4CB82 /* CocktailsViewModel.swift */; };
-		AD388DB62CF0E3D900D4CB82 /* CocktailDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD388DB52CF0E3D900D4CB82 /* CocktailDetailsViewModel.swift */; };
 		AD388DB92CF0F1D400D4CB82 /* TextItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD388DB82CF0F1D400D4CB82 /* TextItemView.swift */; };
 		AD58B99D2C7A275C0099F70A /* CocktailsBookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58B99C2C7A275C0099F70A /* CocktailsBookApp.swift */; };
 		AD58B99F2C7A275C0099F70A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58B99E2C7A275C0099F70A /* ContentView.swift */; };
@@ -32,6 +27,11 @@
 		AD58B9E32C7A42A40099F70A /* CocktailsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58B9E22C7A42A40099F70A /* CocktailsListView.swift */; };
 		AD58B9E52C7A43B20099F70A /* CocktailItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58B9E42C7A43B20099F70A /* CocktailItem.swift */; };
 		ADBFF3272CF7724500F1DBF2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = ADBFF3262CF7724500F1DBF2 /* Localizable.xcstrings */; };
+		ADBFF32F2CF9D0C500F1DBF2 /* CategoriesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBFF32E2CF9D0C500F1DBF2 /* CategoriesState.swift */; };
+		ADBFF3312CF9D0E100F1DBF2 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBFF3302CF9D0E100F1DBF2 /* AppState.swift */; };
+		ADBFF3332CF9D36D00F1DBF2 /* GlassesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBFF3322CF9D36D00F1DBF2 /* GlassesState.swift */; };
+		ADBFF3352CF9D42F00F1DBF2 /* IngredientsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBFF3342CF9D42F00F1DBF2 /* IngredientsState.swift */; };
+		ADBFF3372CF9D67600F1DBF2 /* CocktailsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBFF3362CF9D67600F1DBF2 /* CocktailsState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,11 +55,6 @@
 		AD388D932CEF641F00D4CB82 /* Glass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glass.swift; sourceTree = "<group>"; };
 		AD388D982CEF66A000D4CB82 /* GlassesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassesListView.swift; sourceTree = "<group>"; };
 		AD388D9A2CEF7E5900D4CB82 /* CocktailDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetailsView.swift; sourceTree = "<group>"; };
-		AD388DA02CF0BE0800D4CB82 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
-		AD388DA32CF0BE5900D4CB82 /* IngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewModel.swift; sourceTree = "<group>"; };
-		AD388DA52CF0BF2F00D4CB82 /* GlassesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassesViewModel.swift; sourceTree = "<group>"; };
-		AD388DA72CF0BF6D00D4CB82 /* CocktailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsViewModel.swift; sourceTree = "<group>"; };
-		AD388DB52CF0E3D900D4CB82 /* CocktailDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetailsViewModel.swift; sourceTree = "<group>"; };
 		AD388DB82CF0F1D400D4CB82 /* TextItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextItemView.swift; sourceTree = "<group>"; };
 		AD58B9992C7A275C0099F70A /* CocktailsBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailsBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD58B99C2C7A275C0099F70A /* CocktailsBookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsBookApp.swift; sourceTree = "<group>"; };
@@ -80,6 +75,11 @@
 		AD58B9E22C7A42A40099F70A /* CocktailsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsListView.swift; sourceTree = "<group>"; };
 		AD58B9E42C7A43B20099F70A /* CocktailItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailItem.swift; sourceTree = "<group>"; };
 		ADBFF3262CF7724500F1DBF2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		ADBFF32E2CF9D0C500F1DBF2 /* CategoriesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesState.swift; sourceTree = "<group>"; };
+		ADBFF3302CF9D0E100F1DBF2 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		ADBFF3322CF9D36D00F1DBF2 /* GlassesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassesState.swift; sourceTree = "<group>"; };
+		ADBFF3342CF9D42F00F1DBF2 /* IngredientsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsState.swift; sourceTree = "<group>"; };
+		ADBFF3362CF9D67600F1DBF2 /* CocktailsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,18 +115,6 @@
 			path = Glasses;
 			sourceTree = "<group>";
 		};
-		AD388D9F2CF0BDE200D4CB82 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				AD388DA02CF0BE0800D4CB82 /* CategoriesViewModel.swift */,
-				AD388DA32CF0BE5900D4CB82 /* IngredientsViewModel.swift */,
-				AD388DA52CF0BF2F00D4CB82 /* GlassesViewModel.swift */,
-				AD388DA72CF0BF6D00D4CB82 /* CocktailsViewModel.swift */,
-				AD388DB52CF0E3D900D4CB82 /* CocktailDetailsViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		AD388DB72CF0F1BC00D4CB82 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,8 +146,8 @@
 		AD58B99B2C7A275C0099F70A /* CocktailsBook */ = {
 			isa = PBXGroup;
 			children = (
+				ADBFF32D2CF9D08700F1DBF2 /* States */,
 				ADBFF3262CF7724500F1DBF2 /* Localizable.xcstrings */,
-				AD388D9F2CF0BDE200D4CB82 /* ViewModels */,
 				AD58B9DC2C7A3C0A0099F70A /* Resources */,
 				AD58B9C92C7A294A0099F70A /* Services */,
 				AD58B9C82C7A29410099F70A /* Models */,
@@ -259,6 +247,18 @@
 				AD388D9A2CEF7E5900D4CB82 /* CocktailDetailsView.swift */,
 			);
 			path = Cocktails;
+			sourceTree = "<group>";
+		};
+		ADBFF32D2CF9D08700F1DBF2 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				ADBFF3302CF9D0E100F1DBF2 /* AppState.swift */,
+				ADBFF32E2CF9D0C500F1DBF2 /* CategoriesState.swift */,
+				ADBFF3342CF9D42F00F1DBF2 /* IngredientsState.swift */,
+				ADBFF3322CF9D36D00F1DBF2 /* GlassesState.swift */,
+				ADBFF3362CF9D67600F1DBF2 /* CocktailsState.swift */,
+			);
+			path = States;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,21 +395,21 @@
 				AD388D942CEF641F00D4CB82 /* Glass.swift in Sources */,
 				AD58B9E02C7A41090099F70A /* Cocktail.swift in Sources */,
 				AD58B9CF2C7A2B460099F70A /* NetworkService.swift in Sources */,
-				AD388DA42CF0BE5900D4CB82 /* IngredientsViewModel.swift in Sources */,
 				AD58B9CD2C7A2AEB0099F70A /* Ingredient.swift in Sources */,
-				AD388DA82CF0BF6D00D4CB82 /* CocktailsViewModel.swift in Sources */,
 				AD58B99F2C7A275C0099F70A /* ContentView.swift in Sources */,
-				AD388DB62CF0E3D900D4CB82 /* CocktailDetailsViewModel.swift in Sources */,
+				ADBFF32F2CF9D0C500F1DBF2 /* CategoriesState.swift in Sources */,
+				ADBFF3312CF9D0E100F1DBF2 /* AppState.swift in Sources */,
 				AD58B9D52C7A2FF30099F70A /* CategoriesListView.swift in Sources */,
 				AD388D9B2CEF7E5900D4CB82 /* CocktailDetailsView.swift in Sources */,
 				AD388D992CEF66A000D4CB82 /* GlassesListView.swift in Sources */,
 				AD58B99D2C7A275C0099F70A /* CocktailsBookApp.swift in Sources */,
 				AD388DB92CF0F1D400D4CB82 /* TextItemView.swift in Sources */,
+				ADBFF3352CF9D42F00F1DBF2 /* IngredientsState.swift in Sources */,
 				AD58B9CB2C7A2A080099F70A /* Category.swift in Sources */,
 				AD58B9E32C7A42A40099F70A /* CocktailsListView.swift in Sources */,
-				AD388DA62CF0BF2F00D4CB82 /* GlassesViewModel.swift in Sources */,
 				AD58B9E52C7A43B20099F70A /* CocktailItem.swift in Sources */,
-				AD388DA12CF0BE0800D4CB82 /* CategoriesViewModel.swift in Sources */,
+				ADBFF3372CF9D67600F1DBF2 /* CocktailsState.swift in Sources */,
+				ADBFF3332CF9D36D00F1DBF2 /* GlassesState.swift in Sources */,
 				AD58B9D72C7A300E0099F70A /* IngredientsListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

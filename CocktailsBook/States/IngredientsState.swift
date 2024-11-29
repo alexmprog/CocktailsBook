@@ -1,14 +1,14 @@
 //
-//  IngredientsViewModel.swift
+//  IngredientsState.swift
 //  CocktailsBook
 //
-//  Created by Alexandr Golovach on 22.11.24.
+//  Created by Alexandr Golovach on 29.11.24.
 //
 
 import Foundation
 import SwiftUI
 
-@Observable class IngredientsViewModel {
+@Observable class IngredientsState {
     
     private(set) var ingredients: [Ingredient] = []
     

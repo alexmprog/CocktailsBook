@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct GlassesListView: View {
-        
-    @State private var viewModel: GlassesViewModel = GlassesViewModel()
+    
+    @Environment(GlassesState.self) private var glassesState
     
     var body: some View {
         let _ = Self._printChanges()
         NavigationStack {
             List {
-                ForEach(viewModel.glasses) { glass in
+                ForEach(glassesState.glasses) { glass in
                     NavigationLink {
                         CocktailsListView(cocktailsSource: CocktailsSource.glasses, sourceId: glass.id)
                     } label: {
@@ -28,7 +28,7 @@ struct GlassesListView: View {
             .navigationTitle("glasses_title")
             .task {
                 do {
-                     try await viewModel.fetchAllGlasses()
+                     try await glassesState.fetchAllGlasses()
                 } catch {
                     print(error.localizedDescription)
                 }

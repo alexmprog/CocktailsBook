@@ -1,14 +1,14 @@
 //
-//  GlassesViewModel.swift
+//  GlassesState.swift
 //  CocktailsBook
 //
-//  Created by Alexandr Golovach on 22.11.24.
+//  Created by Alexandr Golovach on 29.11.24.
 //
 
 import Foundation
 import SwiftUI
 
-@Observable class GlassesViewModel {
+@Observable class GlassesState {
     
     private(set) var glasses: [Glass] = []
     

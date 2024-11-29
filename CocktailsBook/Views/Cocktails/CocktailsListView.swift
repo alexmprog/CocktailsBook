@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CocktailsListView: View {
     
-    @State private var viewModel: CocktailsViewModel = CocktailsViewModel()
+    @Environment(CocktailsState.self) private var cocktailsState
     
     var cocktailsSource: CocktailsSource = CocktailsSource.categories
     var sourceId: String?
@@ -18,7 +18,7 @@ struct CocktailsListView: View {
     var body: some View {
         let _ = Self._printChanges()
         List {
-            ForEach(viewModel.cocktails) { cocktail in
+            ForEach(cocktailsState.cocktails) { cocktail in
                 NavigationLink {
                     CocktailDetailsView(cocktail: cocktail)
                 } label: {
@@ -32,7 +32,7 @@ struct CocktailsListView: View {
         .task {
             if sourceId != nil {
                 do {
-                    try await viewModel.fetchCocktailsBySource(source: cocktailsSource, sourceId: sourceId!)
+                    try await cocktailsState.fetchCocktailsBySource(source: cocktailsSource, sourceId: sourceId!)
                 } catch {
                     print(error.localizedDescription)
                 }
