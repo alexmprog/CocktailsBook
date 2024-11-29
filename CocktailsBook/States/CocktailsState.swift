@@ -8,37 +8,26 @@
 import Foundation
 import SwiftUI
 
-@Observable class CocktailsState {
+class CocktailsState {
     
-    private(set) var cocktails: [Cocktail] = []
-    private(set) var cocktailDetails: CocktailDetails? = nil
-
-    private var lastSource: CocktailsSource? = nil
-    private var lastSourceId: String? = nil
+    private let networkService: NetworkService
     
-    func fetchCocktailsBySource(source: CocktailsSource, sourceId: String) async throws {
-        if(source == lastSource && sourceId == lastSourceId && !self.cocktails.isEmpty){
-            return
-        }
-        self.cocktails = []
-        lastSource = source
-        lastSourceId = sourceId
-        let service = NetworkService.shared
-        self.cocktails = switch(source){
+    init(networkService: NetworkService){
+        self.networkService = networkService
+    }
+    
+    func fetchCocktailsBySource(source: CocktailsSource, sourceId: String) async throws -> [Cocktail] {
+        return switch(source){
             case .categories:
-                try await service.getCocktailsByCategory(categoryId: sourceId)
+                try await networkService.getCocktailsByCategory(categoryId: sourceId)
             case .ingredients:
-                try await service.getCocktailsByIngredient(ingredientId: sourceId)
+                try await networkService.getCocktailsByIngredient(ingredientId: sourceId)
             case .glasses:
-                try await service.getCocktailsByGlass(glassId: sourceId)
+                try await networkService.getCocktailsByGlass(glassId: sourceId)
         }
     }
     
-    func fetchCocktailDetails(cocktailId: String) async throws {
-        if(self.cocktailDetails?.id == cocktailId){
-            return
-        }
-        self.cocktailDetails = nil
-        self.cocktailDetails = try await NetworkService.shared.getCocktailDetails(coctailId: cocktailId)
+    func fetchCocktailDetails(cocktailId: String) async throws -> CocktailDetails {
+        return try await networkService.getCocktailDetails(coctailId: cocktailId)
     }
 }

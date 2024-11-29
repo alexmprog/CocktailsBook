@@ -10,9 +10,17 @@ import SwiftUI
 
 @Observable class AppState {
     
-    private(set) var categoriesState: CategoriesState = CategoriesState()
-    private(set) var ingredientsState: IngredientsState = IngredientsState()
-    private(set) var glassesState: GlassesState = GlassesState()
-    private(set) var cocktailsState: CocktailsState = CocktailsState()
+    private(set) var categoriesState: CategoriesState
+    private(set) var ingredientsState: IngredientsState
+    private(set) var glassesState: GlassesState
+    private(set) var cocktailsState: CocktailsState
+    
+    init(){
+        let networkService = NetworkService(baseUrl: "https://www.thecocktaildb.com/api/json/v1/1/")
+        self.categoriesState = CategoriesState(networkService: networkService)
+        self.ingredientsState = IngredientsState(networkService: networkService)
+        self.glassesState = GlassesState(networkService: networkService)
+        self.cocktailsState = CocktailsState(networkService: networkService)
+    }
     
 }

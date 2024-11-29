@@ -12,11 +12,17 @@ import SwiftUI
     
     private(set) var ingredients: [Ingredient] = []
     
+    private let networkService: NetworkService
+    
+    init(networkService: NetworkService){
+        self.networkService = networkService
+    }
+    
     func fetchAllIngredients() async throws {
         if(!self.ingredients.isEmpty) {
             return
         }
-        self.ingredients = try await NetworkService.shared.getAllIngredients()
+        self.ingredients = try await networkService.getAllIngredients()
     }
 
 }

@@ -13,6 +13,8 @@ struct CocktailDetailsView: View {
     let cocktail: Cocktail
     
     @Environment(AppState.self) private var appState
+    
+    @State private var cocktailDetails: CocktailDetails? = nil
 
     var body: some View {
         let _ = Self._printChanges()
@@ -33,17 +35,17 @@ struct CocktailDetailsView: View {
                 .scaledToFit()
                 Text(cocktail.name)
                     .padding(.all, 8)
-                Text(appState.cocktailsState.cocktailDetails?.category ?? "" )
+                Text(cocktailDetails?.category ?? "" )
                     .padding(.all, 8)
-                Text(appState.cocktailsState.cocktailDetails?.glass ?? "" )
+                Text(cocktailDetails?.glass ?? "" )
                     .padding(.all, 8)
-                Text(appState.cocktailsState.cocktailDetails?.description ?? "" )
+                Text(cocktailDetails?.description ?? "" )
                     .padding(.all, 8)
                 }.frame(maxWidth: .infinity, alignment: .leading)
         }
         .task {
             do {
-                try await appState.cocktailsState.fetchCocktailDetails(cocktailId: cocktail.id)
+                self.cocktailDetails = try await appState.cocktailsState.fetchCocktailDetails(cocktailId: cocktail.id)
             } catch {
                 print(error.localizedDescription)
             }
