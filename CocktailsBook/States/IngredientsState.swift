@@ -13,6 +13,9 @@ import SwiftUI
     private(set) var ingredients: [Ingredient] = []
     
     func fetchAllIngredients() async throws {
+        if(!self.ingredients.isEmpty) {
+            return
+        }
         self.ingredients = try await NetworkService.shared.getAllIngredients()
     }
 

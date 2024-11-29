@@ -13,6 +13,9 @@ import SwiftUI
     private(set) var categories: [Category] = []
     
     func fetchAllCategories() async throws {
+        if(!self.categories.isEmpty) {
+            return
+        }
         self.categories = try await NetworkService.shared.getAllCategories()
     }
     
